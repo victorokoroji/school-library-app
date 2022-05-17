@@ -11,5 +11,8 @@ class Person
     @age
   end
 
-  
+  def modify_person
+    @name
+    @age
+  end
 end
