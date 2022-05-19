@@ -1,7 +1,7 @@
 require './decorator.rb'
 
-class CapitalizeDecorator < Decorator
+class TrimmerDecorator < Decorator
   def correct_name
-    @nameable.name.toUpperCase()
+    @nameable.correct_name.slice(0, 9)
   end
 end
