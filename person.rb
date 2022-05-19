@@ -2,6 +2,7 @@ require './nameable.rb'
 
 class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
+    super()
     @id = Math.floor(Math.random * 10)
     @name = name
     @age = age
@@ -16,7 +17,6 @@ class Person < Nameable
   end
 
   def correct_name
-     super
     @name
   end
   private
