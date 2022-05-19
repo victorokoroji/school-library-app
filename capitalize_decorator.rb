@@ -2,6 +2,6 @@ require './decorator.rb'
 
 class CapitalizeDecorator < Decorator
   def correct_name
-    @nameable.name.toUpperCase()
+    @nameable.correct_name.capitalize
   end
 end
