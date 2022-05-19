@@ -1,4 +1,4 @@
-require './naeable.rb'
+require './nameable.rb'
 
 class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
@@ -16,6 +16,7 @@ class Person < Nameable
   end
 
   def correct_name
+     super
     @name
   end
   private
