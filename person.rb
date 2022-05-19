@@ -1,4 +1,6 @@
-class Person
+require './naeable.rb'
+
+class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
     @id = Math.floor(Math.random * 10)
     @name = name
@@ -13,6 +15,9 @@ class Person
     is_of_age || @parent_permission
   end
 
+  def correct_name
+    @name
+  end
   private
 
   def of_age?
