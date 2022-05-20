@@ -8,7 +8,11 @@ class Classroom
   end
   
   
+def add_student(student)
+    @students.push(student)
+    student.owner = self
+  end
   
-  
+
 end
 
