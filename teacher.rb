@@ -1,6 +1,6 @@
 require './person'
 
-class Teacher < person
+class Teacher < Person
   def initialize(specialization)
     super
     @specialization = specialization
