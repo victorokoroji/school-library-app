@@ -1,8 +1,8 @@
 require './person'
 
-class Teacher < person
-  def initialize(specialization)
-    super
+class Teacher < Person
+  def initialize(specialization, parent_permission: true)
+    super(parent_permission: parent_permission)
     @specialization = specialization
   end
 
