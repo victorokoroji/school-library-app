@@ -8,4 +8,9 @@ class Rental
 
     end
   
+  def rental=(rental)
+    @rental = rental
+    rental.books.push(self) unless owner.books.include?(self)
+  end
+  
   end
