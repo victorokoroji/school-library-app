@@ -1,6 +1,7 @@
 require './rental'
 require './student'
 require './teacher'
+
 def initialize_files
   File.write('./datas/books.json', []) unless File.exist?('./datas/books.json')
   File.write('./datas/people.json', []) unless File.exist?('./datas/people.json')
@@ -38,7 +39,7 @@ def load_rentals(books, persons)
   rentals_store.each do |rental|
     rentals << Rental.new(rental['date'],
                           books.select { |book| book.title == rental['title'] } [0],
-                          persons.select { |person| person.name == r['name'] } [0])
+                          persons.select { |person| person.name == rental['name'] } [0])
   end
   rentals
 end

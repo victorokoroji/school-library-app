@@ -4,12 +4,16 @@ require './person'
 require './rental'
 require './student'
 require './teacher'
+require './load_data'
 
 class App
+
+  attr_accessor :books, :persons, :rentals
+
   def initialize
-    @books = []
-    @people = []
-    @rentals = []
+    @books = load_books
+    @people = load_persons
+    @rentals = load_rentals(@books, @persons)
   end
 
   def booklist
@@ -19,7 +23,7 @@ class App
 
   def peoplelist
     puts 'No one found!' if @people.empty?
-    @people.each { |person| puts "[#{person.class}], Name: #{person.name}, Age: #{person.age}, Id: #{person.id}" }
+    @people.each { |person| puts "[#{person.role}], Name: #{person.name}, Age: #{person.age}, Id: #{person.id}" }
   end
 
   def create_person
@@ -121,3 +125,4 @@ class App
     end
   end
 end
+
