@@ -39,9 +39,9 @@ def load_rentals(books, people)
   rental_list = []
   rentals_store = JSON.parse(File.read('./data/rentals.json'))
   rentals_store.each do |rental|
-   rental_list << Rental.new(rental['date'],
-                          books.select { |book| book.title == rental['title'] } [0],
-                          people.select { |person| person.name == rental['name'] } [0])
+    rental_list << Rental.new(rental['date'],
+                              books.select { |book| book.title == rental['title'] } [0],
+                              people.select { |person| person.name == rental['name'] } [0])
   end
   rental_list
 end

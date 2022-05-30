@@ -1,5 +1,5 @@
 require './student'
-require'./teacher'
+require './teacher'
 require './rental'
 
 def store_data(books, persons, rentals)
@@ -26,18 +26,19 @@ def store_persons(persons)
   persons_store = []
   persons.each do |person|
     persons_store << if person.instance_of? Student
-                      {
-                        json_class: 'Student',
-                        name: person.name,
-                        age: person.age,
-                        classroom: person.classroom,
-                        parent_permission: person.parent_permission
-                      }
-                    elsif person.instance_of? Teacher
-                      {
-                        json_class: 'Teacher', name: person.name, age: person.age, specialization: person.specialization
-                      }
-                    end
+                       {
+                         json_class: 'Student',
+                         name: person.name,
+                         age: person.age,
+                         classroom: person.classroom,
+                         parent_permission: person.parent_permission
+                       }
+                     elsif person.instance_of? Teacher
+                       {
+                         json_class: 'Teacher', name: person.name, age: person.age,
+                         specialization: person.specialization
+                       }
+                     end
   end
 
   ruby = JSON.generate(persons_store)
