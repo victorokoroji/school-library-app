@@ -1,27 +1,43 @@
-# school-library
+# OOP School Library
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-The goal of this project is to build an app for a school library that will allow them to add new students or teachers, add new books, save records of who borrowed a given book and when the book was borrowed. This project solely used Object Oriented Programming(OOP).
+> This app manages an object-orient school library built using Ruby.
+
 ## Built With
-- Ruby
+
+- Ruby, Bash
+- irb, pry, cli
 
 ## Getting Started
-**step1** cloning the project:
-```
-git clone https://github.com/vickymarz/school-library-app.git
-```
-**step2** You can use IRB for running the project or any compiler:
-```
-irb
-```
 
-## Author 1
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+- A Command Line Interface.
+- Having Ruby installed.
+
+### Install
+
+Run `git clone git@github.com:jssol/oop-school-library.git`
+
+### Usage
+
+Run `ruby` and enjoy managing your library.
+
+## Authors
+
+👤 **Jonathan Sivahera**
+
+- GitHub: [@jssol](https://github.com/jssol)
+- Twitter: [@jsivahera](https://twitter.com/jsivahera)
+- LinkedIn: [jsivahera](https://linkedin.com/in/jsivahera)
 
 👤 **Okoroji Victor aka Vickymarz**
 
 - GitHub: [@githubhandle](https://github.com/vickymarz)
 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/okoroji-victor-ebube-8791741a0)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -31,10 +47,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Microverse 
 
 ## 📝 License
 

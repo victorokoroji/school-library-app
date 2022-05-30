@@ -1,0 +1,1 @@
+[{ "role": "Student", "name": "John", "age": 20, "parent_permission": true }, { "role": "Teacher", "name": "John", "age": 16, "specialization":"Biology", "parent_permission": true }]
