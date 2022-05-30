@@ -1,11 +1,13 @@
 require './rental'
 require './student'
 require './teacher'
+require './book'
+require 'json'
 
 def initialize_files
-  File.write('./datas/books.json', []) unless File.exist?('./datas/books.json')
-  File.write('./datas/people.json', []) unless File.exist?('./datas/people.json')
-  File.write('./datas/rentals.json', []) unless File.exist?('./datas/rentals.json')
+  File.write('./data/books.json', []) unless File.exist?('./data/books.json')
+  File.write('./data/people.json', []) unless File.exist?('./data/people.json')
+  File.write('./data/rentals.json', []) unless File.exist?('./data/rentals.json')
 end
 
 def load_books
@@ -18,7 +20,7 @@ def load_books
   books
 end
 
-def load_persons
+def load_people
   people = []
   people_store = JSON.parse(File.read('./data/people.json'))
 
@@ -30,16 +32,16 @@ def load_persons
                 Teacher.new(person['age'], person['specialization'], person['name'])
               end
   end
-  persons
+  people
 end
 
-def load_rentals(books, persons)
-  rentals = []
+def load_rentals(books, people)
+  rental_list = []
   rentals_store = JSON.parse(File.read('./data/rentals.json'))
   rentals_store.each do |rental|
-    rentals << Rental.new(rental['date'],
+   rental_list << Rental.new(rental['date'],
                           books.select { |book| book.title == rental['title'] } [0],
-                          persons.select { |person| person.name == rental['name'] } [0])
+                          people.select { |person| person.name == rental['name'] } [0])
   end
-  rentals
+  rental_list
 end

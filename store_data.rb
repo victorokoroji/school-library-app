@@ -1,6 +1,6 @@
-require_relative 'student'
-require_relative 'teacher'
-require_relative 'rental'
+require './student'
+require'./teacher'
+require './rental'
 
 def store_data(books, persons, rentals)
   store_books(books)
